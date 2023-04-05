@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Club Convert Money</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Poppins:wght@200;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<body>
+    <div id="container">
+        <header>
+            <h1>CodeClub Convert Money </h1>
+        </header>
+        <main>
+            <label> converter <b>de:</b>
+                <select>
+                    <option>R$ Real Brasileiro </option>
+                </select>
+            </label>
+            <label> converter <b>para:</b>
+                <select>
+                    <option> US$ Dolar Americano </option>
+                    <option> € Euro</option>
+                    <option> ₿ Bitcoin</option>
+                </select>
+            </label>
+            </label>
+            <label> Valor:
+                <input id="myInput" class="Valor" placeholder="Digite o valor para conversão">
+            </label>
+            <button id= "mybutton" class="buttonConverter">
+                <p id="conv">Converter</p>
+            </button>
+            <section class="caixinha">
+                <div id="caixinhatop">
+                    <img src="./assets/brasil.svg" alt="bandeira-brasil" />
+                    <p id="valorinReal" class="textmoeda"> Real</p>
+                    <p class="textvalue">Real</p>
+                </div>
+                <div id="seta">
+                    <img src="./assets/Vector.png" id="setinha" />
+                </div>
+                <div id="caixinhabotton">
+                    <img src="/assets/Eua.svg" alt="bandeira-usa" />
+                    <p  id="valorinDolar" class="textmoeda">Moeda</p>
+                    <p class="textvalue"> Valor Convertido + moeda</p>
+                </div>
+            </section>
+    </div>
+    </main>
+    </div>
+</body>
+<script src="./scripts.js"></script>
+
+</html>
