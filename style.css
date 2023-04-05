@@ -95,7 +95,7 @@ section {
     margin-bottom: 10px;
     }
 
-.textmoeda {
+.textvalue {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -105,7 +105,7 @@ section {
     margin-top: 5px;
 }
 
-.textvalue {
+.textmoeda {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
