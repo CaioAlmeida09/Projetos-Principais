@@ -29,7 +29,7 @@ const buttonPosClick = () => {
         }).format((input / Euro).toFixed(2))
     }
 
-    else {
+    if (select.value === "₿ Bitcoin"){
         const SubstExt = document.getElementById("valorExt")
         SubstExt.innerText = `₿ ${(input / 141.585).toFixed(5)}`
     }
