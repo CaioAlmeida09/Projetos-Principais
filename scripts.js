@@ -1,13 +1,16 @@
 const buttonclick = document.getElementById("mybutton")
 const select = document.getElementById("mySelct")
 const img = document.getElementById("bandeira")
-const dolar = 5.05
-const Euro = 5.49
-const Bit = 141.585
-const buttonPosClick = () => {
-    const input = document.getElementById("myInput").value
-    const valueFinal = input / dolar
+
+
+const buttonPosClick = async() => {
     const SubstReal = document.getElementById("valorinReal")
+    const input = document.getElementById("myInput").value
+    const moedas = await fetch('https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL').then(response => response.json())
+    const dolar = moedas.USDBRL.high
+    const Euro = moedas.EURBRL.high
+    const Bit = moedas.BTCBRL.high
+    const valueFinal = input / dolar
     SubstReal.innerText = new Intl.NumberFormat("pt-BR", {
         style: "currency",
         currency: "BRL",
@@ -29,11 +32,10 @@ const buttonPosClick = () => {
         }).format((input / Euro).toFixed(2))
     }
 
-    if (select.value === "₿ Bitcoin"){
+    if (select.value === "₿ Bitcoin") {
         const SubstExt = document.getElementById("valorExt")
-        SubstExt.innerText = `₿ ${(input / 141.585).toFixed(5)}`
+        SubstExt.innerText = `₿ ${(input / Bit).toFixed(5)}`
     }
-}
 
 const testSelect = () => {
     const textMoeda = document.getElementById("textMoeda")
@@ -51,7 +53,7 @@ const testSelect = () => {
         img.src = "/assets/Eua.svg"
     }
 
-}
+}}
 
 buttonclick.addEventListener("click", buttonPosClick)
 select.addEventListener("change", testSelect)
